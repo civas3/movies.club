@@ -1,0 +1,137 @@
+.header {
+  padding: 0.2rem 1rem;
+  a {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    align-items: center;
+    span {
+      padding: 0.7rem;
+    }
+    @include respond(b-phone) {
+      &:nth-child(3) {
+        display: none;
+        
+      }
+    }
+  }
+}
+
+.most-recent {
+  .f-dir-col {
+    flex-direction: column;
+  }
+
+  .flex-box {
+    @include respond(b-phone) {
+      &__item {
+        width: 100vw;
+      }
+    }
+  }
+  .header {
+    padding: 2rem 1.5rem;
+  }
+  .background {
+    background-image: url("https://www.news-medical.net/image.axd?picture=2019%2F4%2FLaboratory.jpg");
+    background-size: cover;
+    background-position: center center;
+    min-height: 30rem;
+    //utility
+    text-align: center;
+    align-items: flex-end;
+
+    &__info {
+      background-color: $color-section-transparent-dark;
+      padding: 1.5rem 0.7rem 0.7rem;
+      width: 100%;
+    }
+  }
+  .item {
+    filter: brightness(80%);
+    border: $color-primary-grey-dark solid 0.1px;
+
+    &:hover {
+      filter: brightness(115%);
+      background-color: $color-section-transparent;
+    }
+    &:nth-child(even) {
+      background-color: $color-section-transparent;
+    }
+
+    &__poster {
+      background-size: contain;
+      background-position: center center;
+      height: 6.1rem;
+      width: 6.5rem;
+
+      @include respond(b-phone) {
+        @include bg-cover-no-repeat-center-center;
+        height: 6rem;
+        width: 10.1rem;
+      }
+
+      &:nth-child(even) {
+        background-color: $color-section-transparent;
+      }
+    }
+
+    &__date {
+      justify-content: center;
+      align-items: center;
+      height: 6rem;
+      width: 14rem;
+      &:nth-child(even) {
+        background-color: $color-section-transparent;
+      }
+    }
+
+    &__info {
+      width: 100%;
+      justify-content: center;
+      flex-direction: column;
+      padding-left: 2rem;
+      padding-top: 1rem;
+      .country-flag {
+        width: 1.6rem;
+        height: 1.1rem;
+        display: inline-block;
+        margin-left: 0.5rem;
+      }
+
+      h3 {
+        .country-flag {
+          width: 1.6rem;
+          height: 1.1rem;
+          display: inline-block;
+          margin-right: 0.5rem;
+        }
+      }
+      p {
+        font-weight: 200;
+        line-height: 3.4rem;
+      }
+    }
+  }
+}
+
+/*
+[class*="item"] {
+    display: flex; 
+    justify-content: center;
+    flex-basis: 22%
+}
+*/
+
+article {
+  &:nth-child(2),
+  &:nth-child(3),
+  &:nth-child(5),
+  &:nth-child(6) {
+    .flex-box {
+      //article header section
+      margin-bottom: 1rem;
+    }
+  }
+}

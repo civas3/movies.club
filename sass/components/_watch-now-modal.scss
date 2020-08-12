@@ -1,0 +1,138 @@
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  padding-top: 10rem; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: $color-primary-white;
+    margin: auto;
+    padding: 0;
+    border: 0.1rem solid #888;
+    -webkit-box-shadow: -0.3px 0.6rem 3.5rem 0.9rem rgba(224, 32, 32, 0.75);
+    -moz-box-shadow: -0.3px 0.6rem 3.5rem 0.9rem rgba(224, 32, 32, 0.75);
+    box-shadow: -0.3px 0.6rem 3.5rem 0.9rem rgba(224, 32, 32, 0.75) !important;
+    width: 50%;
+    height: 35rem;
+
+    @include respond(tab-land) {
+      width: 70%;
+      height: 70rem;
+    }
+    @include respond(b-phone) {
+      width: 99%;
+      height: 65rem;
+    }
+
+    box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.2), 0 0.6rem 2rem 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    /* Add Animation */
+    @-webkit-keyframes animatetop {
+      from {
+        top: -30rem;
+        opacity: 0;
+      }
+      to {
+        top: 0;
+        opacity: 1;
+      }
+    }
+
+    @keyframes animatetop {
+      from {
+        top: -30rem;
+        opacity: 0;
+      }
+      to {
+        top: 0;
+        opacity: 1;
+      }
+    }
+
+    /* The Close Button */
+    .close {
+      color: red;
+      position: absolute;
+      right: 2rem;
+      top: 0.2rem;
+      font-size: 2.8rem;
+      font-weight: bold;
+      &:hover,
+      &:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    .modal-header {
+      height: 4rem;
+      @include respond(b-phone) {
+        height: 7rem;
+      }
+      padding-top: 1rem;
+      background-color: $color-button-green-light-hover;
+      text-transform: uppercase;
+      text-shadow: $color-primary-black 0.1rem 0.1rem;
+      text-align: center;
+      h2 {
+        font-size: 200%;
+        color: white;
+        letter-spacing: 0.1rem;
+        text-shadow: rgb(179, 4, 4) 0.1rem 0.1rem;
+        @include respond(b-phone) {
+          width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+          padding-top: 1rem;
+        }
+      }
+    }
+
+    .modal-body {
+      padding: 0.2rem 1.6rem;
+      @include respond(tab-land) {
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+
+      img {
+        width: fit;
+        overflow: hidden;
+        @include respond(tab-land) {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      .input-form {
+        label {
+          color: $color-primary-black;
+          text-shadow: none;
+
+          a {
+            color: $color-primary-grey-light;
+            &:hover {
+              color: $color-primary-orange;
+            }
+          }
+        }
+        .end {
+          // forgot password
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}

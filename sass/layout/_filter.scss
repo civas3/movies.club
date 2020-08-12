@@ -1,0 +1,242 @@
+#filter {
+  display: flex;
+  justify-content: center;
+  background-color: $color-section-transparent-dark;
+  padding: 0.4rem 0;
+  
+
+  .flex {
+    .filter {
+      &__menu {
+        display: flex;
+        justify-content: center;
+
+        button {
+          //filter button
+          align-self: center;
+          height: 4rem;
+          background-color: $color-button-filter;
+          margin: 0.8rem 1rem;
+          padding: 0 2rem;
+          border: none;
+          border-radius: 1rem;
+          cursor: pointer;
+          outline: none;
+          font-size: 1.5rem;
+        }
+      }
+
+      &__search {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        input {
+          //search for movies input
+          width: 60vw;
+          height: 100%;
+          padding: 1.2rem 2rem;
+          margin: 0.8rem 0;
+          display: inline-block;
+          border: none;
+          border-top-left-radius: 2rem;
+          border-bottom-left-radius: 2rem;
+          box-sizing: border-box;
+          outline: none;
+          @include respond(b-phone) {
+            width: 50vw;
+          }
+
+          @include respond(m-phone) {
+            width: 42vw;
+          }
+        }
+
+        button[type="submit"] {
+          width: 100%;
+          background-color: $color-primary-white;
+          color: $color-primary-black;
+          padding: 1.2rem 2rem;
+          margin: 0.8rem 0;
+          border: none;
+          border-top-right-radius: 2rem;
+          border-bottom-right-radius: 2rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+#more-button {
+  border-style: none;
+  background: none;
+  font: 1.6rem;
+  color: $color-header-grey;
+  background-color: $color-primary-grey-light;
+  margin: 0 3rem 0 0;
+  padding: 0 2.2rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  &:hover {
+    background-color: $color-primary-grey-lighther;
+    background-color: $color-primary-grey-lighther;
+
+    color: white;
+    transition: 1s;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+#grow input:checked {
+  color: red;
+}
+
+#grow {
+  -moz-transition: height 0.5s;
+  -ms-transition: height 0.5s;
+  -o-transition: height 0.5s;
+  -webkit-transition: height 0.5s;
+  transition: height 0.5s;
+  height: 0;
+  background-color: $color-section-transparent-dark;
+  //overflow: hidden;
+  @include respond(b-phone) {
+    overflow: hidden;
+  }
+  .active-z {
+    z-index: 1 !important;
+    opacity: 1;
+  }
+
+  nav {
+    //position: relative;
+    & ul {
+      justify-content: center;
+      margin-right: 4rem;
+      list-style: none;
+      position: relative;
+      overflow: visible;
+      z-index: -1;
+      padding: 3rem 0;
+      opacity: 0;
+      @include respond(b-phone) {
+        position: absolute;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 2rem 0;
+      }
+
+      & li {
+        display: inline-block;
+        padding: 0.1rem 1rem;
+        font-size: 1.6rem;
+
+        @include respond(b-phone) {
+          position: relative;
+          margin: 1rem 2rem;
+          padding: 0;
+        }
+
+        &:hover > a {
+          background-color: $color-button-blue-transparent;
+        }
+
+        &:hover > ul {
+          opacity: 1;
+          visibility: visible;
+          top: 2.9rem;
+          z-index: 5;
+          @include respond(b-phone) {
+            top: 0.9rem;
+          }
+        }
+
+        & a {
+          padding: 0.8rem 1.5rem;
+          background-color: $color-primary-grey-light;
+
+          @include respond(b-phone) {
+            padding: 0.8rem 1rem;
+          }
+
+          &:hover {
+            background-color: $color-button-blue-transparent;
+          }
+          &:visited {
+            background-color: $color-button-blue-transparent;
+          }
+        }
+      }
+
+      /*sub-menu*/
+      & ul {
+        position: absolute;
+        top: 9rem;
+        opacity: 0;
+        visibility: hidden;
+        //transition: all 1s ease;
+        height: 40rem;
+        overflow-y: auto;
+        @include respond(b-phone) {
+          right: -2.5rem;
+        }
+
+        & li {
+          background-color: $color-button-blue;
+          position: relative;
+          margin: 0rem;
+          width: 14rem;
+          display: list-item;
+          @include respond(b-phone) {
+            //width: auto;
+            width: 13rem;
+          }
+
+          &:hover {
+            // border-radius: 0.5rem;
+            background-color: $color-primary-white;
+          }
+          &:hover > a {
+            background-color: $color-primary-white;
+            color: black;
+          }
+
+          & a {
+            background-color: $color-button-blue;
+            display: block;
+
+            &:hover {
+              box-shadow: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .free-movies {
+    a {
+      background-color: $color-button-green-light !important;
+      border: 0.1rem solid $color-button-green-light-hover;
+      color: $color-primary-white;
+      &:hover {
+        border: 0.1rem solid $color-primary-white;
+        background-color: $color-button-green-light-hover !important ;
+        transition: 0.3s;
+      }
+    }
+  }
+
+  /*burger-favicon*/
+  .show-f,
+  .icon-f,
+  input {
+    display: none;
+  }
+}

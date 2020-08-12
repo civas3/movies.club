@@ -1,0 +1,61 @@
+form {
+  .input-form {
+    padding-top: 2rem;
+    width: 25vw;
+    margin-left: auto;
+    margin-right: auto;
+    @include respond(b-phone) {
+      width: 80vw;
+    }
+
+    label {
+      display: block;
+      font-size: 1.5rem;
+      //padding-top: 1rem;
+      width: 100%;
+    }
+
+    a {
+      color: $color-primary-grey-lighther;
+
+      &:hover {
+        color: $color-primary-orange;
+      }
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 1rem 2rem;
+      margin: 0.8rem 0;
+      display: inline-block;
+      border: 0.1rem solid #ccc;
+      box-sizing: border-box;
+      border-radius: 0.5rem;
+      font-size: 150%;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    /* Set a style for all buttons */
+    button {
+      background-color: $color-button-green-light-hover;
+      color: white;
+      padding: 1rem 2rem;
+      margin: 0.8rem 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 0.5rem;
+      font-size: 180%;
+      letter-spacing: 0.2rem;
+      text-shadow: $color-primary-black 0.1rem 0.1rem;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+  }
+}

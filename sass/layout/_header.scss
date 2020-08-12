@@ -1,0 +1,302 @@
+header {
+  background-image: url("../images/header-bg.jpg");
+  background-size: 92.5%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  margin-left: auto;
+  margin-right: auto;
+ 
+
+  .top-header {
+    margin-bottom: 4rem;
+    //position: relative;
+
+    @include respond(tab-port) {
+      margin-bottom: 1rem;
+    }
+
+    .logo {
+      flex-direction: column;
+      margin-top: 1rem;
+
+      img {
+        width: 100%;
+      }
+
+      h1 {
+        font-weight: 400;
+        color: $color-primary-orange;
+        width: 100%;
+        text-align: right;
+      }
+    }
+  }
+
+  .sign-in {
+    //top-right green sign in button
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    @include respond(tab-port) {
+      visibility: hidden;
+    }
+    a {
+      display: inline-block;
+    }
+
+    span {
+      //sign-in button
+      background-color: $color-button-green-light-hover;
+      font-size: 1.7rem;
+      padding: 0.8rem 3.5rem;
+      border-radius: 0.7rem;
+      @include respond(b-phone) {
+        padding: 0.7rem 3rem;
+      }
+      @include respond(m-phone) {
+        padding: 0.5rem 2.5rem;
+      }
+
+      &:hover {
+        background-color: $color-button-green-light;
+      }
+    }
+  }
+  .mobile-sign-in {
+    //mobile nav-bar sign in
+    display: none;
+    @include respond(tab-port) {
+      display: block;
+      visibility: visible;
+      text-align: center;
+    }
+  }
+}
+
+#top-nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  background-color: $color-section-transparent;
+
+  .nav-list {
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+    li {
+      line-height: 5rem;
+      position: relative;
+
+      &:hover > .sub-menu {
+        top: 5rem;
+        opacity: 1;
+        visibility: visible; //sub-menu visible on hover
+        @include respond(tab-port) {
+          top: 0;
+        }
+      }
+      .free-movies {
+        background-color: $color-button-green-light;
+      }
+
+      a {
+        display: block;
+        color: #eee;
+        padding: 0 1.5rem;
+        font-size: 1.6rem;
+        @include respond(tab-port) {
+          font-size: 1.8rem;
+        }
+        transition: color 650ms;
+
+        span {
+          width: 1.6rem;
+          height: 1.1rem;
+          display: inline-block;
+          margin-right: 0.5rem;
+        }
+
+        &:hover {
+          background-color: $color-button-blue;
+        }
+      }
+    }
+
+    .sub-menu {
+      width: 17rem;
+      display: block;
+      position: absolute; //removes the spacing between nav-list li's
+      border-top: 0.3rem solid transparent;
+      background-color: $color-primary-grey-dark;
+      z-index: 999;
+      top: 10rem;
+      transition: all 605ms ease;
+      opacity: 0;
+      visibility: hidden; //hide the sub-menu
+
+      &::before {
+        //gives the chevron up on sub menu
+        content: "";
+        position: absolute;
+        top: -2.5rem;
+        left: 3rem;
+        border: 1.2rem solid transparent;
+        border-bottom-color: $color-button-blue;
+      }
+
+      li {
+        line-height: 5rem;
+
+        &:hover > .sub-menu {
+          left: 100%;
+          top: 0 !important;
+          opacity: 1;
+          visibility: visible; //sub-sub-menu visible on hover
+        }
+      }
+
+      .sub-menu {
+        //sub-sub-menu inside sub-menu
+        top: 20rem;
+        border-top: none;
+        border-left: 0.3rem solid $color-button-blue;
+        top: 0;
+        left: 180%; // this will position sub-sub-menu to the left of the sub-menu
+        @include respond(tab-port) {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        &::before {
+          top: 0.9rem;
+          left: -2.5rem;
+          border: 1.2rem solid transparent;
+          border-right-color: $color-button-blue;
+        }
+      }
+    }
+  }
+
+  .scroll {
+    height: 32rem;
+    overflow: auto;
+  }
+
+  .menu-icon {
+    color: #eee;
+    font-size: 4rem;
+    //position: absolute;
+    // top: 25%;
+    // right: 3rem;
+    transform: translate(-16%);
+    cursor: pointer;
+    z-index: 2000;
+    display: none;
+    padding-right: 1rem;
+  }
+
+  .fa-chevron-down {
+    display: none;
+  }
+
+  .fa-home-mobile {
+    display: none;
+
+    @include respond(tab-port) {
+      display: inline-block;
+      font-size: 3.5rem;
+      padding-left: 1rem;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 860px) {
+  #top-nav {
+    .nav-list {
+      position: fixed;
+      flex-direction: column;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      background-color: $color-primary-grey-dark;
+      z-index: 1000;
+      align-items: initial;
+      display: none;
+      overflow-y: scroll;
+
+      & > li {
+        line-height: 7rem;
+
+        &:hover > .sub-menu {
+          //sub menu push down the <li> on hover
+          opacity: 1;
+          visibility: visible;
+          max-height: initial;
+        }
+      }
+
+      .sub-menu {
+        position: initial; //sets back to default = static
+        border: 0.3rem solid transparent;
+        border-left-color: $color-button-blue; //creates line on the left
+        margin-left: 1rem; // space between sub-menu and sub-sub-menu
+        width: 90%;
+        max-height: 0; //removes spacing between <li>
+
+        &::before {
+          display: none;
+        }
+
+        & > li {
+          line-height: 7rem;
+
+          &:hover > .sub-menu {
+            //sub menu push down the <li> on hover
+            opacity: 1;
+            visibility: visible;
+            max-height: initial;
+          }
+        }
+      }
+
+      .fa-home {
+        display: none;
+      }
+
+      .fa-chevron-down {
+        display: inline-block;
+      }
+    }
+
+    .menu-icon {
+      display: block;
+
+      .fa-plus {
+        display: none;
+      }
+    }
+  }
+}
+
+#top-nav.active {
+  //when we click on hamburger shows X
+
+  .fa-plus {
+    display: block;
+  }
+
+  .fa-bars {
+    display: none;
+  }
+
+  .nav-list {
+    display: flex;
+  }
+}
+
+.lock-scroll {
+  overflow: hidden;
+}

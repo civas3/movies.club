@@ -1,0 +1,29 @@
+.btn {
+  width: 8.3rem;
+  color: $color-primary-white;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-left: 0.5rem;
+
+  &__green {
+    background-color: $color-button-green;
+    cursor: pointer;
+    &:hover {
+      background-color: $color-button-green-hover;
+    }
+    @include respond(b-phone) {
+      width: 3rem;
+    }
+  }
+  &__blue {
+    background-color: $color-button-blue;
+  }
+  &__transparent {
+    cursor: pointer;
+    font-size: 1.3rem;
+    background-color: $color-primary-grey-light;
+    &:hover {
+      color: $color-header-grey;
+    }
+  }
+}

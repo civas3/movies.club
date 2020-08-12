@@ -1,0 +1,17 @@
+{
+  "name": "project_movies_site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {   
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "paul civilka",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
+}

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Movies Club</title>
+
+  <!--CSS Style Sheets-->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!--jQuery-->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+  <!--Favicon-->
+  <link rel="shortcut icon" type="images/png" href="images/favicon/favicon.png" />
+
+  <!--Favicon Library-->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+<script src="js/mobile-menu-onscroll-disable.js"></script>
+
+
+<body>
+  <header>
+    <div class="container">
+
+      <div class="top-header flex">
+
+        <div class="logo flex">
+          <a href="index.html"><img src="./images/logo3.jpg" alt="logo"></a>
+          <h1>FREE MOVIES ONLINE</h1>
+        </div>
+
+        <div class="sign-in flex">
+          <a href="login.html"><span>SIGN IN</span></a>
+        </div>
+
+
+      </div>
+
+      <nav id="top-nav" class="top-nav">
+
+        <a href="index.html"><i class="fa fa-home fa-home-mobile"></i></a>
+        <div class="mobile-sign-in sign-in flex">
+          <a href="login.html"><span>SIGN IN</span></a>
+        </div>
+        <div class="menu-icon">
+          <i class="fa fa-bars" onclick="lockScroll();"></i>
+          <i class="fa fa-plus"></i>
+        </div>
+        <ul class="nav-list">
+          <li> <a href="index.html"><i class="fa fa-home"></i></a></li>
+          <li>
+            <a href="#">MOVIES
+              <i class="fa fa-chevron-down"></i>
+            </a>
+            <ul class="sub-menu">
+              <li>
+                <a href="#"><span class="country-flag gb"></span>EN LANGUAGE
+                  <i class="fa fa-chevron-down"></i>
+                </a>
+                <ul class="sub-menu scroll">
+                  <li><a href="movies.html">Comedy</a></li>
+                  <li><a href="movies.html">Horror</a></li>
+                  <li><a href="movies.html">Roantic</a></li>
+                  <li><a href="movies.html">Family</a></li>
+                  <li><a href="movies.html">Drama</a></li>
+                  <li><a href="movies.html">Adventure</a></li>
+                  <li><a href="movies.html">Action</a></li>
+                  <li><a href="movies.html">Fantasy</a></li>
+                  <li><a href="movies.html">Mistic</a></li>
+                  <li><a href="movies.html">Western</a></li>
+                  <li><a href="movies.html">Music</a></li>
+                  <li><a href="movies.html">Epic</a></li>
+                  <li><a href="movies.html">Melodrama</a></li>
+                  <li><a href="movies.html">Sports</a></li>
+                  <li><a href="movies.html">War</a></li>
+                  <li><a href="movies.html">Biographical</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#"><span class="country-flag fr"></span>FR LANGUAGE
+                  <i class="fa fa-chevron-down"></i>
+                </a>
+                <ul class="sub-menu scroll">
+                  <li><a href="movies.html">Comedy</a></li>
+                  <li><a href="movies.html">Horror</a></li>
+                  <li><a href="movies.html">Roantic</a></li>
+                  <li><a href="movies.html">Family</a></li>
+                  <li><a href="movies.html">Drama</a></li>
+                  <li><a href="movies.html">Adventure</a></li>
+                  <li><a href="movies.html">Action</a></li>
+                  <li><a href="movies.html">Fantasy</a></li>
+                  <li><a href="movies.html">Mistic</a></li>
+                  <li><a href="movies.html">Western</a></li>
+                  <li><a href="movies.html">Music</a></li>
+                  <li><a href="movies.html">Epic</a></li>
+                  <li><a href="movies.html">Melodrama</a></li>
+                  <li><a href="movies.html">Sports</a></li>
+                  <li><a href="movies.html">War</a></li>
+                  <li><a href="movies.html">Biographical</a></li>
+
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span class="country-flag sp"></span>SP LANGUAGE
+                  <i class="fa fa-chevron-down"></i>
+                </a>
+                <ul class="sub-menu scroll">
+                  <li><a href="movies.html">Comedy</a></li>
+                  <li><a href="movies.html">Horror</a></li>
+                  <li><a href="movies.html">Roantic</a></li>
+                  <li><a href="movies.html">Family</a></li>
+                  <li><a href="movies.html">Drama</a></li>
+                  <li><a href="movies.html">Adventure</a></li>
+                  <li><a href="movies.html">Action</a></li>
+                  <li><a href="movies.html">Fantasy</a></li>
+                  <li><a href="movies.html">Mistic</a></li>
+                  <li><a href="movies.html">Western</a></li>
+                  <li><a href="movies.html">Music</a></li>
+                  <li><a href="movies.html">Epic</a></li>
+                  <li><a href="movies.html">Melodrama</a></li>
+                  <li><a href="movies.html">Sports</a></li>
+                  <li><a href="movies.html">War</a></li>
+                  <li><a href="movies.html">Biographical</a></li>
+                </ul>
+              </li>
+              <li class="free-movies">
+                <a href="movies.html">FREE MOVIES</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="movies.html">SERIES
+             
+            </a>
+
+          </li>
+          <li>
+            <a href="movies.html">ANIMATION
+             
+            </a>
+
+          </li>
+          <li> <a href="movies.html">ANIME</a></li>
+          <li>
+            <a href="movies.html">SPORT
+             
+            </a>
+
+          </li>
+          <li>
+            <a href="movies.html">TV SHOWS
+          
+            </a>
+
+          </li>
+          <li> <a href="movies.html">DOCUMENTRY</a></li>
+          <li>
+            <a href="movies.html">TOP
+              <i class="fa fa-chevron-down"></i>
+            </a>
+
+          </li>
+        </ul>
+
+
+      </nav>
+
+      <nav id="filter">
+        <div class="flex">
+          <div class="flex__item filter">
+            <div class="filter__menu">
+              <!--  <button onclick="myFunction()" type="button" class="filter__menu--button"> Filter</button>-->
+              <input type="button" onclick="growDiv()" value="FILTER" id="more-button">
+            </div>
+          </div>
+
+          <div class="flex__item filter">
+            <form action="get" action="/">
+              <div class="filter__search">
+                <div class="filter__search--input">
+                  <input type="text" placeholder="search for movie.." />
+                </div>
+                <div class="filter__search--button">
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <div id='grow'>
+        <div class='measuringWrapper'>
+          <nav>
+            <label for="fil-menu-btn" class="icon-f">
+              <span class="fa fa-bars"></span>
+            </label>
+            <input type="checkbox" id="fil-menu-btn" />
+            <ul class="flex" id="toggle-ul">
+              <li>
+                <label for="fil-menu-btn-1" class="show-f">Category</label>
+                <a href="#">Category</a>
+                <input type="checkbox" id="fil-menu-btn-1" />
+                <ul>
+                  <li><a href="#">Movies <input type="radio"></a></li>
+                  <li><a href="#">Series <input type="radio"></a></li>
+                  <li><a href="#">Animation <input type="radio"></a></li>
+                  <li><a href="#">Anime <input type="radio"></a></li>
+                  <li><a href="#">Sport <input type="radio"></a></li>
+                  <li><a href="#">Tv Shows <input type="radio"></a></li>
+                  <li><a href="#">Documentry <input type="radio"></a></li>
+                </ul>
+              </li>
+              <li>
+                <label for="fil-menu-btn-2" class="show-f">Genre</label>
+                <a href="#">Genre</a>
+                <input type="checkbox" id="fil-menu-btn-2" />
+                <ul>
+                  <li><a href="#">Comedy <input type="radio"></a></li>
+                  <li><a href="#">Horror <input type="radio"></a></li>
+                  <li><a href="#">Roantic <input type="radio"></a></li>
+                  <li><a href="#">Family <input type="radio"></a></li>
+                  <li><a href="#">Drama <input type="radio"></a></li>
+                  <li><a href="#">Adventure <input type="radio"></a></li>
+                  <li><a href="#">Action <input type="radio"></a></li>
+                  <li><a href="#">Fantasy <input type="radio"></a></li>
+                  <li><a href="#">Mistic <input type="radio"></a></li>
+                  <li><a href="#">Western <input type="radio"></a></li>
+                  <li><a href="#">Music <input type="radio"></a></li>
+                  <li><a href="#">Epic <input type="radio"></a></li>
+                  <li><a href="#">Melodrama <input type="radio"></a></li>
+                  <li><a href="#">Sports <input type="radio"></a></li>
+                  <li><a href="#">War <input type="radio"></a></li>
+                  <li><a href="#">Biographical <input type="radio"></a></li>
+                </ul>
+              </li>
+              <li>
+                <label for="fil-menu-btn-3" class="show-f">Language</label>
+                <a href="#">Language</a>
+                <input type="checkbox" id="fil-menu-btn-3" />
+                <ul>
+                  <li><a href="#">English <input type="radio"></a></li>
+                  <li><a href="#">Spanish <input type="radio"></a></li>
+                  <li><a href="#">France <input type="radio"></a></li>
+                </ul>
+              </li>
+              <li>
+                <label for="fil-menu-btn-4" class="show-f">Year</label>
+                <a href="#">Year</a>
+                <input type="checkbox" id="fil-menu-btn-4" />
+                <ul>
+                  <li><a href="#">2020 <input type="radio"></a></li>
+                  <li><a href="#">2019 <input type="radio"></a></li>
+                  <li><a href="#">2018 <input type="radio"></a></li>
+                  <li><a href="#">2017 <input type="radio"></a></li>
+                  <li><a href="#">2016 - 2000 <input type="radio"></a></li>
+                  <li><a href="#">1999 - 1990 <input type="radio"></a></li>
+                  <li><a href="#">1989 - 1980 <input type="radio"></a></li>
+                  <li><a href="#">1979 - 1920 <input type="radio"></a></li>
+                </ul>
+              </li>
+              <li>
+                <label for="fil-menu-btn-5" class="show-f">Subtitle</label>
+                <a href="#">Subtitle</a>
+                <input type="checkbox" id="fil-menu-btn-5" />
+                <ul>
+                  <li><a href="#">Yes <input type="radio"></a></li>
+                  <li><a href="#">No <input type="radio"></a></li>
+                </ul>
+              </li>
+              <li>
+                <label for="fil-menu-btn-6" class="show-f">Ranking</label>
+                <a href="#">Ranking</a>
+                <input type="checkbox" id="fil-menu-btn-6" />
+                <ul>
+                  <li><a href="#">9+ <input type="radio"></a></li>
+                  <li><a href="#">8+ <input type="radio"></a></li>
+                  <li><a href="#">7+ <input type="radio"></a></li>
+                  <li><a href="#">6+ <input type="radio"></a></li>
+                  <li><a href="#">5+ <input type="radio"></a></li>
+                  <li><a href="#">4+ <input type="radio"></a></li>
+                </ul>
+              </li>
+              <li class="free-movies"><a href="#">Free movies</a></li>
+            </ul>
+
+          </nav>
+        </div>
+
+
+
+        <div id="filter-toggle" class="filter-toggle">
+          <nav>
+            <label for="fil-menu-btn" class="icon-f">
+              <span class="fa fa-bars"></span>
+            </label>
+            <input type="checkbox" id="fil-menu-btn" />
+            <ul class="flex">
+              <li>
+                <label for="fil-menu-btn-1" class="show-f">Category</label>
+                <a href="#">Category</a>
+                <input type="checkbox" id="fil-menu-btn-1" />
+                <ul>
+                  <li><a href="#">Movies <input type="radio"></a></li>
+                  <li><a href="#">Series <input type="radio"></a></li>
+                  <li><a href="#">Animation <input type="radio"></a></li>
+                  <li><a href="#">Anime <input type="radio"></a></li>
+                  <li><a href="#">Sport <input type="radio"></a></li>
+                  <li><a href="#">Tv Shows <input type="radio"></a></li>
+                  <li><a href="#">Documentry <input type="radio"></a></li>
+                </ul>
+              </li>
+              <li>
+                <label for="fil-menu-btn-2" class="show-f">Genre</label>
+                <a href="#">Genre</a>
+                <input type="checkbox" id="fil-menu-btn-2" />
+                <ul>
+                  <li><a href="#">Comedy <input type="radio"></a></li>
+                  <li><a href="#">Horror <input type="radio"></a></li>
+                  <li><a href="#">Roantic <input type="radio"></a></li>
+                  <li><a href="#">Family <input type="radio"></a></li>
+                  <li><a href="#">Drama <input type="radio"></a></li>
+                  <li><a href="#">Adventure <input type="radio"></a></li>
+                  <li><a href="#">Action <input type="radio"></a></li>
+                  <li><a href="#">Fantasy <input type="radio"></a></li>
+                  <li><a href="#">Mistic <input type="radio"></a></li>
+                  <li><a href="#">Western <input type="radio"></a></li>
+                  <li><a href="#">Music <input type="radio"></a></li>
+                  <li><a href="#">Epic <input type="radio"></a></li>
+                  <li><a href="#">War <input type="radio"></a></li>
+                  <li><a href="#">Sports <input type="radio"></a></li>
+                  <li><a href="#">Biographical <input type="radio"></a></li>
+                  <li><a href="#">Melodrama <input type="radio"></a></li>
+
+                </ul>
+              </li>
+              <li>
+                <label for="fil-menu-btn-3" class="show-f">Language</label>
+                <a href="#">Language</a>
+                <input type="checkbox" id="fil-menu-btn-3" />
+                <ul>
+                  <li><a href="#">English <input type="radio"></a></li>
+                  <li><a href="#">Spanish <input type="radio"></a></li>
+                  <li><a href="#">France <input type="radio"></a></li>
+                </ul>
+              </li>
+              <li>
+                <label for="fil-menu-btn-4" class="show-f">Year</label>
+                <a href="#">Year</a>
+                <input type="checkbox" id="fil-menu-btn-4" />
+                <ul>
+                  <li><a href="#">2020 <input type="radio"></a></li>
+                  <li><a href="#">2019 <input type="radio"></a></li>
+                  <li><a href="#">2018 <input type="radio"></a></li>
+                  <li><a href="#">2017 <input type="radio"></a></li>
+                  <li><a href="#">2016 - 2000 <input type="radio"></a></li>
+                  <li><a href="#">1999 - 1990 <input type="radio"></a></li>
+                  <li><a href="#">1989 - 1980 <input type="radio"></a></li>
+                  <li><a href="#">1979 - 1920 <input type="radio"></a></li>
+                </ul>
+              </li>
+              <li>
+                <label for="fil-menu-btn-5" class="show-f">Subtitle</label>
+                <a href="#">Subtitle</a>
+                <input type="checkbox" id="fil-menu-btn-5" />
+                <ul>
+                  <li><a href="#">Yes <input type="radio"></a></li>
+                  <li><a href="#">No <input type="radio"></a></li>
+                </ul>
+              </li>
+              <li>
+                <label for="fil-menu-btn-6" class="show-f">Ranking</label>
+                <a href="#">Ranking</a>
+                <input type="checkbox" id="fil-menu-btn-6" />
+                <ul>
+                  <li><a href="#">9+ <input type="radio"></a></li>
+                  <li><a href="#">8+ <input type="radio"></a></li>
+                  <li><a href="#">7+ <input type="radio"></a></li>
+                  <li><a href="#">6+ <input type="radio"></a></li>
+                  <li><a href="#">5+ <input type="radio"></a></li>
+                  <li><a href="#">4+ <input type="radio"></a></li>
+                </ul>
+              </li>
+              <li class="free-movies"><a href="#">Free movies <input type="radio"></a></li>
+            </ul>
+
+          </nav>
+        </div>
+      </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <article class="movies">
+        <div class="flex-box">
+
+          <a href="the-movie.html">
+            <div class="image-size poster11"></div>
+          </a>
+          <a href="the-movie.html">
+            <div class="image-size poster12"></div>
+          </a>
+          <a href="the-movie.html">
+            <div class="image-size poster7"></div>
+          </a>
+          <a href="the-movie.html">
+            <div class="image-size poster14"></div>
+          </a>
+          <a href="the-movie.html">
+            <div class="image-size poster15"></div>
+          </a>
+          <a href="the-movie.html">
+            <div class="image-size poster17"></div>
+          </a>
+          <a href="the-movie.html">
+            <div class="image-size poster20"></div>
+          </a>
+      
+          <a href="the-movie.html">
+            <div class="image-size poster30"></div>
+          </a>
+
+
+
+
+
+
+        </div>
+      </article>
+
+
+
+  </main>
+
+
+
+  <script src="js/watch-now-modal.js"></script>
+
+  <script src="js/nav-mobile-toggle.js"></script>
+  <script src="js/nav-z-index.js"></script>
+  <script src="js/nav-filter-toggle.js"></script>
+
+
+
+</body>
+
+</html>

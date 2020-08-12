@@ -1,0 +1,220 @@
+/*“Web typography” refers to the appearance of all the text on your website. It includes basic 
+CSS text properties like what font to use and whether it should be italic or not, but typography 
+is much more than that. It’s about the space between and around letters, words, and lines. It’s 
+the size of different runs of text in relation to one another, and the history behind each font family.
+
+https://www.internetingishard.com/html-and-css/web-typography/
+*/
+
+/* !!!!___ Use % rather than px for all layout-related lenghts (including pictures) ___!!!! */
+
+h3 {
+  font-weight: 400;
+  color: $color-title-grey;
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.3rem;
+  color: $color-title-grey;
+}
+
+.background__info {
+  p {
+    font-size: 1.6rem;
+  }
+}
+
+.header {
+  h2 {
+    font-size: 2.4rem;
+    letter-spacing: 1.3px;
+    font-weight: 400;
+    color: $color-header-grey;
+    text-transform: uppercase;
+    @include respond(b-phone) {
+      font-size: 2.3rem;
+    }
+  }
+}
+
+.grid__item--info {
+  h3 {
+    text-align: center;
+  }
+
+  li {
+    font-size: 1.4rem;
+  }
+
+  .imdb {
+    font-size: 1.7rem;
+    text-shadow: none;
+  }
+
+  span {
+    font-size: 1.5rem;
+  }
+}
+
+.item__info {
+  letter-spacing: 0.3px;
+}
+
+.item__date {
+  font-size: 1.6rem;
+  background-image: url("/images/container-bg.jpg");
+  background-size: fit;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.filter__menu--button {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: $color-title-grey;
+}
+
+/*----------------------------filter---------------------------------------*/
+#filter-toggle {
+  /*filter-menu*/
+  nav {
+    & ul {
+      & li {
+        & a {
+          color: $color-title-grey;
+          line-height: 7rem;
+          font-size: 1.6rem;
+          text-shadow: none;
+
+          &:hover {
+            color: $color-primary-black;
+            font-weight: bold;
+          }
+        }
+      }
+
+      /*filter-sub-menu*/
+      & ul {
+        & li {
+          & a {
+            line-height: 2.5rem;
+            font-size: 1.5rem;
+            display: block;
+            width: 100%;
+
+            &:hover {
+              color: $color-primary-black;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .free-movies {
+    background-color: $color-button-green-light;
+    a {
+      color: $color-button-green-light;
+      font-weight: bold;
+
+      &:hover {
+        color: $color-primary-white;
+        text-shadow: 0.1rem 0.1rem $color-primary-black;
+      }
+    }
+  }
+
+  /*filter--burger-favicon
+    .show-f,
+    .icon-f,
+    input {
+    }
+}
+*/
+}
+
+/* -----------------------------the-movies ------------------------------------ */
+
+.the-movie {
+  .flex-box {
+    h1 {
+      font-size: 800%;
+      letter-spacing: 0.4rem;
+      text-shadow: $color-primary-white 0.2rem 0.2rem;
+      @include respond(b-phone) {
+        font-size: 500%;
+      }
+    }
+    &__item {
+    &--info {
+      p,
+      span {
+        font-size: 200%;
+        @include respond(b-phone) {
+          font-size: 150%;
+        }
+        @include respond(s-phone) {
+          font-size: 120%;
+        }
+      }
+      p {
+        font-weight: bold;
+      }
+    }
+
+    &--description {
+      p {
+        font-size: 200% ;
+        text-shadow: $color-primary-black 0.1rem 0.1rem;
+      }
+    }
+
+    &--cast {
+      ul {
+        li {
+          font-size: 170%;
+        }
+      }
+    }
+
+    &--functions {
+      button,
+      a {
+        font-size: 150%;
+        color: $color-primary-black;
+        font-weight: bold;
+        text-shadow: none;
+        @include respond(b-phone) {
+          font-size: 130%;
+        }
+
+        &:hover {
+          text-shadow: $color-primary-grey-light 0.1rem 0.1rem;
+        }
+      }
+    }
+  }
+  }
+}
+
+
+/* -----------------------------register ------------------------------------ */
+.register {
+  .flex-box {
+    &__item {
+
+      &:nth-child(2) {
+        font-size: 150%;
+        h3 {
+          font-size: 150%;
+        }
+      }
+    }
+  }
+}
+
+
+/* -----------------------------register ------------------------------------ */
+

@@ -1,0 +1,73 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  list-style-type: none;
+}
+
+
+html {
+  //*62.5% is equal to 10px = 1rem
+  font-size: 62.5%;
+  color: $color-primary-white;
+  font-family: "Roboto", sans-serif;
+  text-shadow: 1px 1px $color-primary-black;
+
+  @include respond(s-phone) {
+    //320px
+    //*37.5% is equal to 6px = 1rem
+    font-size: 37.5%;
+  }
+
+  @include respond(tab-land) {
+    //1024px
+    //*56.25% is equal to 9px = 1rem
+    font-size: 56.25%;
+  }
+
+  @include respond(big-desktop) {
+    //1800px+
+    //*75.00% is equal to 12px = 1rem
+    font-size: 75%;
+  }
+
+  body {
+    //includes the padding and border in an element's total width and height
+    box-sizing: border-box;
+    background-color: $color-primary-black;
+    width: 100%;
+    padding-bottom: 5rem;
+
+    .container {
+      padding: 7rem 5rem;
+
+      &:first-child {
+        margin-top: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      @include respond(tab-land) {
+        padding: 7rem 0;
+        //overflow-x: hidden !important;
+      }
+      @include respond(s-phone) {
+        // padding: 1rem 1rem !important;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: $color-primary-white;
+      cursor: pointer;
+    }
+
+    article {
+      &:not(:first-child) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

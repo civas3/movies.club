@@ -1,0 +1,55 @@
+
+ // MEDIA QUERY MANAGER
+/*
+0 - 320px:      Smaller mobile phones
+320 - 360px:    Medium mobile phones
+360 - 480px:    Biger mobile phones
+480 - 768px:    Tablet portrait
+768 - 1024px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- s-phone
+- m-phone
+- b-phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == s-phone {
+      @media only screen and (max-width: 20em) { @content };      //320px
+  }
+  @if $breakpoint == m-phone{
+      @media only screen and (max-width: 22.5em) { @content };   //360px
+  }
+  @if $breakpoint == b-phone {
+      @media only screen and (max-width: 30em) { @content };     //480px
+  }
+  @if $breakpoint == tab-port {
+      @media only screen and (max-width: 48em) { @content };     //768px
+  }
+  @if $breakpoint == tab-land {
+      @media only screen and (max-width: 64em) { @content };     //1024px
+  }
+  @if $breakpoint == big-desktop {
+      @media only screen and (min-width: 112.5em) { @content };  //1800px+
+  }
+}
+
+@mixin Height53r-bgBlack {
+    background-color: $color-primary-black !important;
+    height: 53rem;   
+}
+
+
+@mixin bg-cover-no-repeat-center-center {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}

@@ -1,0 +1,45 @@
+/*abstracts*/
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+@import "abstracts/movie-list";
+
+/*base*/
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+/*components*/
+@import "components/buttons";
+@import "components/fa-icons";
+@import "components/input-form";
+@import "components/watch-now-modal";
+@import "components/watch-trailer-modal";
+
+
+/*layout*/
+@import "layout/filter";
+@import "layout/header";
+@import "layout/grid";
+@import "layout/footer";
+
+/*pages*/
+@import "pages/home";
+@import "pages/login";
+@import "pages/register";
+@import "pages/forgot-password";
+@import "pages/movies";
+@import "pages/the-movie";
+
+
+
+
+
+
+
+
+
+    
+
+

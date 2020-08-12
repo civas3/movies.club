@@ -1,0 +1,22 @@
+/*Functions allow you to define complex operations on SassScript values that you can re-use throughout 
+your stylesheet. They make it easy to abstract out common formulas and behaviors in a readable way.
+
+Functions are defined using the @function at-rule, which is written:
+ @function <name>(<arguments...>) { ... }. A function’s name can be any Sass identifier. 
+ It can only contain universal statements, as well as the @return at-rule which indicates the 
+ value to use as the result of the function call. Functions are called using the normal CSS 
+ function syntax.
+
+SCSS SYNTAX
+@function pow($base, $exponent) {
+  $result: 1;
+  @for $_ from 1 through $exponent {
+    $result: $result * $base;
+  }
+  @return $result;
+}
+
+.sidebar {
+  float: left;
+  margin-left: pow(4, 3) * 1px;
+}*/

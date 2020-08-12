@@ -1,0 +1,148 @@
+/*Utility classes are meant to do only one thing, and do it well. They are designed to be simple,
+ composable and re-usable, allowing for easy and fast development. While a CSS system based on utility 
+ classes alone is not desirable, having a set of utility classes that allow you to quickly put together 
+ templates is great.
+
+ https://blog.mariano.io/css-utility-classes-how-to-use-them-effectively-d61ee00dad2d
+ 
+Common Use Cases
+*I find utility classes really helpful for:
+*Margin/padding
+*Text (colors, size, styles)
+*Common Background Colors
+*Hiding/Showing stuff
+*Display (block, inline-block)
+
+Naming utility classes
+To separate utility classes from component classes, it’s good to namespace them. I use the .u- namespace.
+You can also shorthand most properties for faster coding. Here are a couple I use:
+*p/m for margin/padding
+*t/r/l/b for top/right/left/bottom
+*v/h for vertical/horizontal
+*bg for background
+*/
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.width-50 {
+  width: 50%;
+  @include respond(b-phone) {
+    width: 100%;
+  }
+}
+.width-100 {
+  width: 100%;
+}
+
+.image-size {
+  height: 23.6rem;
+  width: 17rem;
+  @include respond(tab-land) {
+    height: 22.6rem;
+    width: 15.6rem;
+  }
+  @include respond(tab-port) {
+    width: 14rem;
+  }
+
+  @include respond(b-phone) {
+    height: 6rem;
+    width: 8.1rem;
+  }
+}
+
+.flex-box {
+  background-color: $color-primary-grey;
+}
+
+.a-center {
+  align-items: center;
+}
+
+//flags
+.country-flag {
+  background-size: cover;
+  background-position: center center;
+}
+.gb {
+  background-image: url("../images/flags/flag-gb.jpg");
+}
+.fr {
+  background-image: url("../images/flags/flag-fr.jpg");
+}
+.sp {
+  background-image: url("../images/flags/flag-sp.jpg");
+}
+
+//bg-images
+
+.grid {
+  &__item {
+    background-image: url("../images/container-bg.jpg");
+    background-size: fit;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+.invisible {
+  //used it for sign in button on login page
+  visibility: hidden !important;
+}
+
+//login/register/sig-in
+.page-title {
+  height: 4rem;
+  width: 100%;
+  background-color: $color-primary-grey;
+  justify-content: center;
+  align-items: center;
+  padding: 3.5rem 0;
+  h1 {
+    font-size: 250%;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+  @include respond(b-phone) {
+    overflow: auto;
+    padding-bottom: 20rem;
+  }
+}
+
+.page-number {
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  padding-top: 1.5rem;
+
+  a {
+    font-size: 1.7rem;
+    background-color: $color-section-transparent-dark;
+    margin: 0 0.3rem;
+    padding: 1rem;
+    &:hover {
+      color: $color-primary-orange;
+      background-color: $color-primary-grey-lighther;
+    }
+    &:nth-child(7),
+    &:nth-child(8),
+    &:nth-child(9),
+    &:nth-child(10),
+    &:nth-child(11) {
+      @include respond(b-phone) {
+        display: none;
+      }
+    }
+  }
+  span {
+    font-size: 1.7rem;
+    justify-content: center;
+    align-items: center;
+  }
+}

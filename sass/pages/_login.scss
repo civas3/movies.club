@@ -1,0 +1,27 @@
+.login {
+  @include Height53r-bgBlack;
+  .flex-box {
+    justify-content: center;
+    background-color: $color-primary-black;
+  }
+
+  .input-form {
+    & :nth-child(3) {
+      //forgot password
+      a {
+        justify-content: flex-end;
+      }
+    }
+
+    & :nth-child(4) {
+      //remember me
+      padding-top: 2rem;
+    }
+
+    & :nth-child(6) {
+      //register here
+      text-align: center;
+    }
+
+  }
+}

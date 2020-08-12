@@ -1,0 +1,27 @@
+.movies {
+  .flex-box {
+    background-color: $color-button-green;
+    flex-wrap: wrap;
+    a {
+      cursor: pointer;
+      height: 30rem;
+      width: 15%;
+      margin: 1rem;
+      @include respond(b-phone) {
+        height: 17rem;
+        width: 28%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .image-size {
+      @include bg-cover-no-repeat-center-center;
+      border-top-left-radius: 0.5rem;
+      border-bottom-left-radius: 0.5rem;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+

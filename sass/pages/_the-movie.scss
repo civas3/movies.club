@@ -1,0 +1,145 @@
+.the-movie {
+  background-color: $color-primary-grey-lighther;
+  //  height: 100vh;
+  width: 100%;
+  .flex-box {
+    flex-direction: row;
+    height: 100vh;
+    position: relative;
+    background-image: url("../images/parasite-poster22.png");
+    background-size: fit;
+    background-repeat: no-repeat;
+    background-position: right 12rem;
+    z-index: 1;
+    @include respond(b-phone) {
+      padding-top: 5rem;
+    }
+
+    @include respond(tab-land) {
+      background-position: center center;
+      .col-lg-4 {
+        width: 50%;
+      }
+    }
+    @include respond(b-phone) {
+      background-size: contain;
+      background-position: center bottom;
+      .col-lg-4 {
+        width: 80%;
+      }
+    }
+    & :first-child {
+      justify-content: start !important;
+    }
+
+    &__item {
+      flex-direction: column;
+      margin: 8rem 0 0 5rem;
+
+      &--info {
+        display: flex;
+        display: row;
+        padding-bottom: 2rem;
+        justify-content: space-evenly;
+        align-items: center;
+        p,
+        span {
+          
+          margin-right: 2.5rem;
+
+          @include respond(s-phone) {
+            margin-right: 2rem;
+          }
+        }
+
+        & :nth-child(4),
+        & :nth-child(5) {
+          border: $color-primary-white solid 0.2rem;
+          border-radius: 0.5rem;
+          padding: 0.2rem 0.5rem 0.1rem;
+          //margin-top: -0.5rem;
+        }
+      }
+
+      &--description {
+        padding-bottom: 2rem;
+        z-index: 2;
+
+        p {
+          width: 40vw;
+          @include respond(tab-land) {
+            width: 70vw;
+          }
+        }
+      }
+
+      &--cast {
+        margin-bottom: 2rem;
+        ul {
+          li {
+            margin-bottom: 0.2rem;
+          }
+        }
+      }
+
+      &--functions {
+        margin-top: 3rem;
+
+        button,
+        a {
+          margin-right: 2rem;
+          padding: 1rem;
+          border-radius: 0.5rem;
+
+          background-color: $color-primary-white;
+          border: $color-primary-white solid 0.2rem;
+
+          &:hover {
+            border: $color-primary-grey-light solid 0.2rem;
+          }
+        }
+      }
+
+      &--vote{
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+       // margin-top: 2rem;
+       position: absolute;
+       top: 5rem;
+       right: 5rem;
+       @include respond(b-phone) {
+         top: 4%;
+         left: 50%;
+        transform: translate(-50%, -4%);
+
+       }
+
+        
+        button{
+          display: block;
+          margin-bottom: 0.4rem;
+          margin-top: 1rem;
+          width: 100%;
+          background-color: transparent;     
+          border: none;
+          outline: none;
+         
+         
+         
+        }
+        span{
+          margin-left: 1.4rem;
+          font-size: 200%;
+        }
+        img{
+          height: 100%;
+        }
+      
+     
+      }
+
+     
+    }
+  }
+}
